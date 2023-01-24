@@ -1,0 +1,29 @@
+<div>
+  <h1 class="title">Products</h1>
+  <table class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>name</th>
+        <th>type</th>
+        <th>catID</th>
+        <th>description</th>
+        <th>price</th>
+        <th>featured</th>
+        <th>active</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of product$ |async">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.type }}</td>
+        <td>{{ product.catID }}</td>
+        <td>{{ product.description }}</td>
+        <td>${{ product.price }}</td>
+        <td>{{ product.featured }}</td>
+        <td>{{ product.active }}</td>
+    </tbody>
+  </table>
+
+</div>
